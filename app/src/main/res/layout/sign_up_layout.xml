@@ -41,7 +41,7 @@
             app:met_floatingLabel="highlight"
             app:met_primaryColor="@color/colorPrimary"
             app:met_singleLineEllipsis="true"/>
-        
+
 
 
     </LinearLayout>
