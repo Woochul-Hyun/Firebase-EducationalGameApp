@@ -5,14 +5,14 @@
     <item
         android:id="@+id/action_category"
         android:enabled="true"
-        android:iconTint="Categories"
+        android:title="Categories"
         android:icon="@drawable/ic_question_answer_black_24dp"
         app:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/action_ranking"
         android:enabled="true"
-        android:iconTint="Ranking"
+        android:title="Ranking"
         android:icon="@drawable/ic_star_black_24dp"
         app:showAsAction="ifRoom"/>
 
