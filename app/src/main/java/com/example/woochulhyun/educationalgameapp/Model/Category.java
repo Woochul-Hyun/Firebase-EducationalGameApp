@@ -6,24 +6,24 @@ package com.example.woochulhyun.educationalgameapp.Model;
 
 public class Category {
 
-    private String Nmae;
+    private String Name;
     private String Image;
 
     public Category() {
     }
 
-    public Category(String nmae, String image) {
-        Nmae = nmae;
+    public Category(String name, String image) {
+        Name = name;
         Image = image;
 
     }
 
     public String getNmae() {
-        return Nmae;
+        return Name;
     }
 
     public void setNmae(String nmae) {
-        Nmae = nmae;
+        Name = nmae;
     }
 
     public String getImage() {
