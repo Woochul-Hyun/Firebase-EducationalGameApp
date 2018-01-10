@@ -1,6 +1,7 @@
 package com.example.woochulhyun.educationalgameapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -69,7 +70,11 @@ public class MainActivity extends AppCompatActivity {
                     {
                         User login = dataSnapshot.child(user).getValue(User.class);
                         if(login.getPassword().equals(pwd))
-                            Toast.makeText(MainActivity.this, "Login Ok!", Toast.LENGTH_SHORT).show();
+                        {
+                            Intent homeActivity = new Intent(MainActivity.this,Home.class);
+                            startActivity(homeActivity);
+                            finish();
+                        }
                         else
                             Toast.makeText(MainActivity.this, "Wrong password!", Toast.LENGTH_SHORT).show();
                     }
