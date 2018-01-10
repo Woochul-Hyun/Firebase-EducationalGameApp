@@ -70,7 +70,7 @@ public class CategoryFragment extends Fragment {
         ) {
             @Override
             protected void populateViewHolder(CategoryViewHolder viewHolder, final Category model, int position) {
-                viewHolder.category_name.setText(model.getNmae());
+                viewHolder.category_name.setText(model.getName());
                 Picasso.with(getActivity())
                         .load(model.getImage())
                         .into(viewHolder.category_image);
@@ -78,7 +78,7 @@ public class CategoryFragment extends Fragment {
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(getActivity(), String.format("%s | %s",adapter.getRef(position).getKey(),model.getNmae()), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), String.format("%s | %s",adapter.getRef(position).getKey(),model.getName()), Toast.LENGTH_SHORT).show();
                     }
                 });
 
