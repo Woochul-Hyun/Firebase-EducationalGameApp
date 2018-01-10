@@ -18,11 +18,11 @@ public class Category {
 
     }
 
-    public String getNmae() {
+    public String getName() {
         return Name;
     }
 
-    public void setNmae(String nmae) {
+    public void setName(String nmae) {
         Name = nmae;
     }
 
