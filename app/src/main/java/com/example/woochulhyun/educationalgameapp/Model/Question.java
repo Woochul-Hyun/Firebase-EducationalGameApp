@@ -33,7 +33,7 @@ public class Question {
         return AnswerA;
     }
 
-    public void setAnsaweA(String ansaweA) {
+    public void setAnswerA(String ansaweA) {
         AnswerA = ansaweA;
     }
 
