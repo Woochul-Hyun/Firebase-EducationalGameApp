@@ -5,13 +5,13 @@ package com.example.woochulhyun.educationalgameapp.Model;
  */
 
 public class Question {
-    private String Qestion, AnswerA, AnswerB, AnswerC, AnswerD, CorrectAnswer, CategoryId, IsImageQuestion;
+    private String Question, AnswerA, AnswerB, AnswerC, AnswerD, CorrectAnswer, CategoryId, IsImageQuestion;
 
     public Question() {
     }
 
-    public Question(String qestion, String answerA, String answerB, String answerC, String answerD, String correctAnswer, String categoryId, String isImageQuestion) {
-        Qestion = qestion;
+    public Question(String question, String answerA, String answerB, String answerC, String answerD, String correctAnswer, String categoryId, String isImageQuestion) {
+        Question = question;
         AnswerA = answerA;
         AnswerB = answerB;
         AnswerC = answerC;
@@ -21,12 +21,12 @@ public class Question {
         IsImageQuestion = isImageQuestion;
     }
 
-    public String getQestion() {
-        return Qestion;
+    public String getQuestion() {
+        return Question;
     }
 
-    public void setQestion(String qestion) {
-        Qestion = qestion;
+    public void setQuestion(String question) {
+        Question = question;
     }
 
     public String getAnswerA() {
