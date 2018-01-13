@@ -22,8 +22,8 @@ public class Category {
         return Name;
     }
 
-    public void setName(String nmae) {
-        Name = nmae;
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getImage() {
