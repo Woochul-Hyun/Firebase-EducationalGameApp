@@ -137,14 +137,13 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
     protected void onResume() {
         super.onResume();
 
-        totalQuestion = Common.questionList.size();
+        totalQuestion= Common.questionList.size();
 
         mCountDown = new CountDownTimer(TIMEOUT, INTERVAL) {
             @Override
             public void onTick(long minisec) {
                 progressBar.setProgress(progressValue);
                 progressValue++;
-
 
             }
 
