@@ -5,14 +5,14 @@ package com.example.woochulhyun.educationalgameapp.Model;
  */
 
 public class Question {
-    private String Qestion, AnsaweA, AnswerB, AnswerC, AnswerD, CorrectAnswer, CategoryId, IsImageQuestion;
+    private String Qestion, AnswerA, AnswerB, AnswerC, AnswerD, CorrectAnswer, CategoryId, IsImageQuestion;
 
     public Question() {
     }
 
-    public Question(String qestion, String ansaweA, String answerB, String answerC, String answerD, String correctAnswer, String categoryId, String isImageQuestion) {
+    public Question(String qestion, String answerA, String answerB, String answerC, String answerD, String correctAnswer, String categoryId, String isImageQuestion) {
         Qestion = qestion;
-        AnsaweA = ansaweA;
+        AnswerA = answerA;
         AnswerB = answerB;
         AnswerC = answerC;
         AnswerD = answerD;
@@ -30,11 +30,11 @@ public class Question {
     }
 
     public String getAnsaweA() {
-        return AnsaweA;
+        return AnswerA;
     }
 
     public void setAnsaweA(String ansaweA) {
-        AnsaweA = ansaweA;
+        AnswerA = ansaweA;
     }
 
     public String getAnswerB() {
