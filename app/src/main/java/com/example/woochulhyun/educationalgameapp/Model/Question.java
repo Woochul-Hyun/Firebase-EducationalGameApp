@@ -5,20 +5,20 @@ package com.example.woochulhyun.educationalgameapp.Model;
  */
 
 public class Question {
-    private String Qestion, AnsaweA, AnswerB, AnswerC, AnswerD, CorrectAnswer, categoryID, isImageQuestion;
+    private String Qestion, AnsaweA, AnswerB, AnswerC, AnswerD, CorrectAnswer, CategoryId, IsImageQuestion;
 
     public Question() {
     }
 
-    public Question(String qestion, String ansaweA, String answerB, String answerC, String answerD, String correctAnswer, String categoryID, String isImageQuestion) {
+    public Question(String qestion, String ansaweA, String answerB, String answerC, String answerD, String correctAnswer, String categoryId, String isImageQuestion) {
         Qestion = qestion;
         AnsaweA = ansaweA;
         AnswerB = answerB;
         AnswerC = answerC;
         AnswerD = answerD;
         CorrectAnswer = correctAnswer;
-        this.categoryID = categoryID;
-        this.isImageQuestion = isImageQuestion;
+        CategoryId = categoryId;
+        IsImageQuestion = isImageQuestion;
     }
 
     public String getQestion() {
@@ -69,19 +69,19 @@ public class Question {
         CorrectAnswer = correctAnswer;
     }
 
-    public String getCategoryID() {
-        return categoryID;
+    public String getCategoryId() {
+        return CategoryId;
     }
 
-    public void setCategoryID(String categoryID) {
-        this.categoryID = categoryID;
+    public void setCategoryId(String categoryId) {
+        CategoryId = categoryId;
     }
 
     public String getIsImageQuestion() {
-        return isImageQuestion;
+        return IsImageQuestion;
     }
 
     public void setIsImageQuestion(String isImageQuestion) {
-        this.isImageQuestion = isImageQuestion;
+        IsImageQuestion = isImageQuestion;
     }
 }
