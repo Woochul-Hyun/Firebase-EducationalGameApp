@@ -29,12 +29,12 @@ public class Question {
         Qestion = qestion;
     }
 
-    public String getAnsaweA() {
+    public String getAnswerA() {
         return AnswerA;
     }
 
-    public void setAnswerA(String ansaweA) {
-        AnswerA = ansaweA;
+    public void setAnswerA(String answerA) {
+        AnswerA = answerA;
     }
 
     public String getAnswerB() {
