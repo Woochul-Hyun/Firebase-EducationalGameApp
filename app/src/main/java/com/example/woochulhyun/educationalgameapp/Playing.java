@@ -99,14 +99,14 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
             {
                 //if is image
                 Picasso.with(getBaseContext())
-                        .load(Common.questionList.get(index).getQestion())
+                        .load(Common.questionList.get(index).getQuestion())
                         .into(question_image);
                 question_image.setVisibility(View.VISIBLE);
                 question_text.setVisibility(View.INVISIBLE);
             }
             else
             {
-                question_text.setText(Common.questionList.get(index).getQestion());
+                question_text.setText(Common.questionList.get(index).getQuestion());
 
                 //if question is text, we will set image to invisible
                 question_image.setVisibility(View.INVISIBLE);
