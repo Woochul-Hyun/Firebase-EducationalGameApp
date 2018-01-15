@@ -1,0 +1,325 @@
+{
+  "Category" : {
+    "01" : {
+      "Image" : "https://static.pexels.com/photos/256369/pexels-photo-256369.jpeg",
+      "Name" : "Physics"
+    },
+    "02" : {
+      "Image" : "https://static.pexels.com/photos/248152/pexels-photo-248152.jpeg",
+      "Name" : "Chemistry"
+    },
+    "03" : {
+      "Image" : "https://static.pexels.com/photos/706924/pexels-photo-706924.jpeg",
+      "Name" : "Biology"
+    }
+  },
+  "Users" : {
+    "woochyun" : {
+      "password" : "12345",
+      "userName" : "woochyun"
+    }
+  },
+  "Questions": {
+    "1": {
+      "Question": "Among four, highest wavelength is of",
+      "AnswerA": "radio waves",
+      "AnswerB": "infrared",
+      "AnswerC": "ultraviolet",
+      "AnswerD": "gamma rays",
+      "CorrectAnswer": "radio waves",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "2": {
+      "Question": "Output of a truck is 4500 J and its efficiency is 50%, input energy provided to truck is",
+      "AnswerA": "5000J",
+      "AnswerB": "900J",
+      "AnswerC": "9000J",
+      "AnswerD": "500J",
+      "CorrectAnswer": "9000J",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "3": {
+      "Question": "Adding of two vectors to get a single vector is termed as",
+      "AnswerA": "Final vector",
+      "AnswerB": "Resultant vector",
+      "AnswerC": "Dominant vector",
+      "AnswerD": "Recessive vector",
+      "CorrectAnswer": "Resultant vector",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "4": {
+      "Question": "If wavelength of a wave is denoted as 'λ' and amplitude is denoted as 'A', then shortest horizontal distance between any crest and trough is equal to",
+      "AnswerA": "1 ⁄ 2 of λ",
+      "AnswerB": "λ",
+      "AnswerC": "1 ⁄ 2 of A",
+      "AnswerD": "A",
+      "CorrectAnswer": "1 ⁄ 2 of λ",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "5": {
+      "Question": "Assuming heat capacity of a 10g of water to be 42 J ⁄ K, heat required to raise its temperature from 25 °C to 35 °C would be",
+      "AnswerA": "42J",
+      "AnswerB": "420J",
+      "AnswerC": "4200J",
+      "AnswerD": "None of above",
+      "CorrectAnswer": "420J",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "6": {
+      "Question": "Velocity is the",
+      "AnswerA": "distance covered per unit time",
+      "AnswerB": "displacement covered per unit time",
+      "AnswerC": "time taken per unit distance",
+      "AnswerD": "time taken per unit displacement",
+      "CorrectAnswer": "displacement covered per unit time",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "7": {
+      "Question": "Total internal reflection occurs when",
+      "AnswerA": "light passes from a denser to a lighter medium",
+      "AnswerB": "light comes into air from vacuum",
+      "AnswerC": "light goes to vacuum from air",
+      "AnswerD": "light passes from denser to less dense medium",
+      "CorrectAnswer": "light passes from denser to less dense medium",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "8": {
+      "Question": "A velocity-time graph can give you",
+      "AnswerA": "Velocity of moving object",
+      "AnswerB": "Acceleration of moving object",
+      "AnswerC": "Displacement of moving object",
+      "AnswerD": "All of above",
+      "CorrectAnswer": "All of above",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "9": {
+      "Question": "A car covers a distance of 5 km in 5 mins, its average speed is equal to",
+      "AnswerA": "1 km ⁄ h",
+      "AnswerB": "25 km ⁄ h",
+      "AnswerC": "60 km ⁄ h",
+      "AnswerD": "None of above",
+      "CorrectAnswer": "60 km ⁄ h",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+    "10": {
+      "Question": "Speed is defined as",
+      "AnswerA": "The change of distance with respect to time",
+      "AnswerB": "The rate of change of distance",
+      "AnswerC": "Distance moved per unit time",
+      "AnswerD": "All of above",
+      "CorrectAnswer": "All of above",
+      "CategoryId": "01",
+      "IsImageQuestion": "false"
+    },
+	"11": {
+      "Question": "When an acid (H+) is added to alkali (OH-), product is",
+      "AnswerA": "hydroxides",
+      "AnswerB": "water",
+      "AnswerC": "salts",
+      "AnswerD": "hydrogen gas",
+      "CorrectAnswer": "salts",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"12": {
+      "Question": "K2O + H2O →",
+      "AnswerA": "K(OH)3",
+      "AnswerB": "KOH",
+      "AnswerC": "KOH.H2O",
+      "AnswerD": "KO + H2 + O2",
+      "CorrectAnswer": "KOH",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"13": {
+      "Question": "In forming an ionic bond in Potassium Fluoride (KF), Potassium ion (K+)",
+      "AnswerA": "gets a single positive charge",
+      "AnswerB": "gets a double positive charge",
+      "AnswerC": "gets a single negative charge",
+      "AnswerD": "gets a double negative charge",
+      "CorrectAnswer": "gets a single positive charge",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"14": {
+      "Question": "Molecular weight of propane (C3H8) is",
+      "AnswerA": "44.095g/mol",
+      "AnswerB": "40.01g/mol",
+      "AnswerC": "41.01g/mol",
+      "AnswerD": "46.02g/mol",
+      "CorrectAnswer": "44.095g/mol",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"15": {
+      "Question": "Chemical formula of silver bromide is",
+      "AnswerA": "Ag2Br3",
+      "AnswerB": "AgBr",
+      "AnswerC": "AgBrO",
+      "AnswerD": "AgBr3.H2O",
+      "CorrectAnswer": "AgBr",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"16": {
+      "Question": "Aluminum (Al) is preferred in overhead power cables because",
+      "AnswerA": "it is a good conductor",
+      "AnswerB": "it acts as an insulator, in case of lightening",
+      "AnswerC": "it prevents accidents",
+      "AnswerD": "it is lighter in weight",
+      "CorrectAnswer": "it is lighter in weight",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"17": {
+      "Question": "Other than O and C, main elements of a brick wall includes",
+      "AnswerA": "Silicon (Si)",
+      "AnswerB": "Calcium (Ca)",
+      "AnswerC": "Aluminum (Al)",
+      "AnswerD": "Both A and B",
+      "CorrectAnswer": "Both A and B",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"18": {
+      "Question": "When hot molten liquid cools,",
+      "AnswerA": "first crystals are most pure",
+      "AnswerB": "impure substances may also form crystals",
+      "AnswerC": "it turns into gas",
+      "AnswerD": "it turns into aqueous solution",
+      "CorrectAnswer": "first crystals are most pure",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"19": {
+      "Question": "Evaporation occurs only",
+      "AnswerA": "after boiling",
+      "AnswerB": "after extreme cooling",
+      "AnswerC": "at surface of a liquid",
+      "AnswerD": "if boiling occurs at atmospheric pressure",
+      "CorrectAnswer": "at surface of a liquid",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"20": {
+      "Question": "Haber process for manufacturing of ammonia requires catalyst of",
+      "AnswerA": "vanadium oxide",
+      "AnswerB": "iron",
+      "AnswerC": "platinum",
+      "AnswerD": "nickel",
+      "CorrectAnswer": "iron",
+      "CategoryId": "02",
+      "IsImageQuestion": "false"
+    },
+	"21": {
+      "Question": "Back flow of blood from right ventricle to right atrium is prevented through",
+      "AnswerA": "semilunar valves",
+      "AnswerB": "mitral valves",
+      "AnswerC": "tricuspid valves",
+      "AnswerD": "median septum",
+      "CorrectAnswer": "tricuspid valves",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"22": {
+      "Question": "Nervous control acts through",
+      "AnswerA": "impulses transmitted by neuron",
+      "AnswerB": "hormones transported by blood",
+      "AnswerC": "leukocytes in blood",
+      "AnswerD": "thrombocytes",
+      "CorrectAnswer": "impulses transmitted by neuron",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"23": {
+      "Question": "Over-breathing is a symptom of",
+      "AnswerA": "too less oxygen",
+      "AnswerB": "too much oxygen",
+      "AnswerC": "too much carbon dioxide",
+      "AnswerD": "too much carbon monoxide",
+      "CorrectAnswer": "too much oxygen",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"24": {
+      "Question": "In human adult, kidney receives how many Liters of blood per minute to filter?",
+      "AnswerA": "0.8 Liter",
+      "AnswerB": "1.2 Liter",
+      "AnswerC": "3.2 Liter",
+      "AnswerD": "5.0 Liter",
+      "CorrectAnswer": "1.2 Liter",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"25": {
+      "Question": "Alveolar walls are",
+      "AnswerA": "a lining of single cells",
+      "AnswerB": "a lining of multiple cells",
+      "AnswerC": "are a lining of palisade cells",
+      "AnswerD": "depend on age of organism",
+      "CorrectAnswer": "a lining of single cells",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"26": {
+      "Question": "Hydrolysis can not be carried out without",
+      "AnswerA": "water",
+      "AnswerB": "amino acids",
+      "AnswerC": "peptides",
+      "AnswerD": "mitochondria",
+      "CorrectAnswer": "water",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"27": {
+      "Question": "Sugar results after hydrolysis of",
+      "AnswerA": "peptones",
+      "AnswerB": "carbohydrates",
+      "AnswerC": "trace elements",
+      "AnswerD": "fats",
+      "CorrectAnswer": "carbohydrates",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"28": {
+      "Question": "Eyeball is kept firm and refracting light through",
+      "AnswerA": "aqueous humor",
+      "AnswerB": "vitreous humor",
+      "AnswerC": "vitreous humor",
+      "AnswerD": "both A and B",
+      "CorrectAnswer": "both A and B",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"29": {
+      "Question": "In outer corner of upper lid, is the",
+      "AnswerA": "lachrymal tear gland",
+      "AnswerB": "naso-lachrymal duct",
+      "AnswerC": "liberal palpebral ligament",
+      "AnswerD": "orbital part",
+      "CorrectAnswer": "lachrymal tear gland",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    },
+	"30": {
+      "Question": "Damage to nervous system and limb paralysis is caused due to",
+      "AnswerA": "rickets",
+      "AnswerB": "beriberi",
+      "AnswerC": "diabetes",
+      "AnswerD": "scurvy",
+      "CorrectAnswer": "beriberi",
+      "CategoryId": "03",
+      "IsImageQuestion": "false"
+    }
+  }
+  
+}
