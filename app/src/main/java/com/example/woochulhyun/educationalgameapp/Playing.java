@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 
 public class Playing extends AppCompatActivity implements View.OnClickListener{
 
-    Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+    Vibrator vibrator;
 
 
     final static long INTERVAL = 1000; //Timer interval is 1 sec
@@ -65,6 +65,8 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
 
+        vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+
 
         mCountDown.cancel();
         if (index < totalQuestion) //still have questions in list
@@ -80,7 +82,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
             else
             {
                 //Choose wrong answer
-                vibrator.vibrate (1000);
+                vibrator.vibrate(1000);
                 Intent intent = new Intent(this,Done.class);
                 Bundle dataSend = new Bundle();
                 dataSend.putInt("SCORE", score);
