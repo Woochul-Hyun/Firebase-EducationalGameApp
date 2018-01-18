@@ -82,7 +82,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
             else
             {
                 //Choose wrong answer
-                vibrator.vibrate(1000);
+                vibrator.vibrate(1000); //vibrate 1 sec
                 Intent intent = new Intent(this,Done.class);
                 Bundle dataSend = new Bundle();
                 dataSend.putInt("SCORE", score);
