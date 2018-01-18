@@ -1,7 +1,9 @@
 package com.example.woochulhyun.educationalgameapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.CountDownTimer;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,13 +11,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.os.Vibrator;
 
 import com.example.woochulhyun.educationalgameapp.Common.Common;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+
 public class Playing extends AppCompatActivity implements View.OnClickListener{
+
+    Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+
 
     final static long INTERVAL = 1000; //Timer interval is 1 sec
     final static long TIMEOUT = 10000; //Total timer time is 10 sec
@@ -24,7 +31,6 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
     CountDownTimer mCountDown;
 
     int index=0, score=0, thisQuestion=0, totalQuestion, correctAnswer;
-
 
     ProgressBar progressBar;
     ImageView question_image;
@@ -59,6 +65,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
 
+
         mCountDown.cancel();
         if (index < totalQuestion) //still have questions in list
         {
@@ -73,6 +80,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
             else
             {
                 //Choose wrong answer
+                vibrator.vibrate (1000);
                 Intent intent = new Intent(this,Done.class);
                 Bundle dataSend = new Bundle();
                 dataSend.putInt("SCORE", score);
