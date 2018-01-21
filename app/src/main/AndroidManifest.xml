@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.woochulhyun.educationalgameapp">
-    <uses-permission android:name = "android.permission.VIBRATE"/>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,8 @@
         <activity android:name=".Start" />
         <activity android:name=".Playing" />
         <activity android:name=".Done" />
-        <activity android:name=".ScoreDetail"></activity>
+        <activity android:name=".ScoreDetail" />
+        <activity android:name=".Share"></activity>
     </application>
 
 </manifest>
