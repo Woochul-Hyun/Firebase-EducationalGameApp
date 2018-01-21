@@ -55,6 +55,22 @@
 
     </android.support.v7.widget.RecyclerView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Share"
+            android:gravity="center"
+            android:layout_gravity="bottom"/>
+
+
+    </LinearLayout>
 
 
 </RelativeLayout>
