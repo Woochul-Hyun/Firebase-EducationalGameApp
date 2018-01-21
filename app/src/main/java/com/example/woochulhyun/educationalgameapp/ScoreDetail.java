@@ -1,9 +1,12 @@
 package com.example.woochulhyun.educationalgameapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.woochulhyun.educationalgameapp.Model.QuestionScore;
 import com.example.woochulhyun.educationalgameapp.ViewHolder.ScoreDetailViewHolder;
@@ -22,10 +25,22 @@ public class ScoreDetail extends AppCompatActivity {
 
     String viewUser="";
 
+    Button share;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_detail);
+
+        share = (Button)findViewById(R.id.share);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ScoreDetail.this, Share.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         database = FirebaseDatabase.getInstance();
         question_score = database.getReference("Question_Score");
