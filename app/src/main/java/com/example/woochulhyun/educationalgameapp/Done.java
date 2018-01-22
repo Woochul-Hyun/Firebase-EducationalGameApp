@@ -19,8 +19,8 @@ public class Done extends AppCompatActivity {
     TextView txtResultScore, getTxtResultQuestion;
     ProgressBar progressBar;
 
-    FirebaseDatabase database;
-    DatabaseReference question_score;
+    FirebaseDatabase database;              //connecting Firebase Database
+    DatabaseReference question_score;       //connecting Firebase Database
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,9 @@ public class Done extends AppCompatActivity {
         setContentView(R.layout.activity_done);
 
         database = FirebaseDatabase.getInstance();
-        question_score = database.getReference("Question_Score");
+        question_score = database.getReference("Question_Score");       //The Name on category in Firebase Database where this java class call
 
-        txtResultScore = (TextView)findViewById(R.id.txtTotalScore);
+        txtResultScore = (TextView)findViewById(R.id.txtTotalScore);            //Refers..
         getTxtResultQuestion = (TextView)findViewById(R.id.txtTotalQuestion);
         progressBar = (ProgressBar)findViewById(R.id.doneProgressBar);
         btnTryAgain = (Button)findViewById(R.id.btnTryAgain);
@@ -38,7 +38,7 @@ public class Done extends AppCompatActivity {
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Done.this,Home.class);
+                Intent intent = new Intent(Done.this,Home.class);       //When user click button, page move from Done to Home
                 startActivity(intent);
                 finish();
             }
@@ -52,8 +52,8 @@ public class Done extends AppCompatActivity {
             int totalQuestion = extra.getInt("TOTAL");
             int correctAnswer = extra.getInt("CORRECT");
 
-            txtResultScore.setText(String.format("SCORE : %d", score));
-            getTxtResultQuestion.setText(String.format("PASSED : %d / %d", correctAnswer, totalQuestion));
+            txtResultScore.setText(String.format("SCORE : %d", score));     //Show Score for this quiz
+            getTxtResultQuestion.setText(String.format("PASSED : %d / %d", correctAnswer, totalQuestion));      //Show how many question you got out of total
 
             progressBar.setMax(totalQuestion);
             progressBar.setProgress(correctAnswer);

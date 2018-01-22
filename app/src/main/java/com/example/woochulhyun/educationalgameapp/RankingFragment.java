@@ -39,8 +39,8 @@ public class RankingFragment extends Fragment {
     LinearLayoutManager layoutManager;
     FirebaseRecyclerAdapter<Ranking,RankingViewHolder> adapter;
 
-    FirebaseDatabase database;
-    DatabaseReference questionScore, rankingTbl;
+    FirebaseDatabase database;                                              //connecting Firebase Database
+    DatabaseReference questionScore, rankingTbl;                            //connecting Firebase Database
 
     int sum=0;
 
@@ -55,8 +55,8 @@ public class RankingFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         database = FirebaseDatabase.getInstance();
-        questionScore = database.getReference("Question_Score");
-        rankingTbl = database.getReference("Ranking");
+        questionScore = database.getReference("Question_Score");        //The Name on category in Firebase Database where this java class call
+        rankingTbl = database.getReference("Ranking");                  //The Name on category in Firebase Database where this java class call
     }
 
     @Nullable
@@ -77,7 +77,7 @@ public class RankingFragment extends Fragment {
             public void callBack(Ranking ranking) {
                 rankingTbl.child(ranking.getUserName())
                         .setValue(ranking);
-                //showRanking();
+                                                                        //showRanking();
             }
         });
 
@@ -118,7 +118,7 @@ public class RankingFragment extends Fragment {
         questionScore.orderByChild("user").equalTo(userName)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
+                    public void onDataChange(DataSnapshot dataSnapshot) {           //update the latest ranking score to database
                         for(DataSnapshot data:dataSnapshot.getChildren())
                         {
                             QuestionScore ques = data.getValue(QuestionScore.class);

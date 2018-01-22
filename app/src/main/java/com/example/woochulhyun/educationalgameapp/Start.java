@@ -21,8 +21,8 @@ public class Start extends AppCompatActivity {
 
     Button btnPlay;
 
-    FirebaseDatabase database;
-    DatabaseReference questions;
+    FirebaseDatabase database;                                          //connecting Firebase Database
+    DatabaseReference questions;                                        //connecting Firebase Database
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class Start extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         database = FirebaseDatabase.getInstance();
-        questions = database.getReference("Questions");
+        questions = database.getReference("Questions");              //The Name on category in Firebase Database where this java class call
 
         loadQuestion(Common.categoryId);
 
@@ -39,7 +39,7 @@ public class Start extends AppCompatActivity {
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Start.this,Playing.class);
+                Intent intent = new Intent(Start.this,Playing.class);        //When user click button, page move from Start to Playing
                 startActivity(intent);
                 finish();
             }

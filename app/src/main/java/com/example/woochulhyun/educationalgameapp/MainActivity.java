@@ -22,13 +22,13 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    MaterialEditText edtNewUser, edtNewPassword;  //for sign up
-    MaterialEditText edtUser, edtPassword; // for sign in
+    MaterialEditText edtNewUser, edtNewPassword;                        //for sign up
+    MaterialEditText edtUser, edtPassword;                              // for sign in
 
     Button btnSignup, btnSignIn;
 
-    FirebaseDatabase database;
-    DatabaseReference users;
+    FirebaseDatabase database;                                    //connecting Firebase Database
+    DatabaseReference users;                                     //connecting Firebase Database
 
 
     @Override
@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Firebase
         database= FirebaseDatabase.getInstance();
-        users = database.getReference("Users");
+        users = database.getReference("Users");                                   //The Name on category in Firebase Database where this java class call
 
-        edtUser = (MaterialEditText)findViewById(R.id.edtUser);
+        edtUser = (MaterialEditText)findViewById(R.id.edtUser);                      //Refers
         edtPassword = (MaterialEditText)findViewById(R.id.edtPassword);
 
         btnSignIn = (Button)findViewById(R.id.btn_sign_in);
@@ -67,26 +67,27 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(user).exists())
                 {
-                    if(!user.isEmpty())
+                    if(!user.isEmpty())                                                                          //Id section must be filled
                     {
-                        User login = dataSnapshot.child(user).getValue(User.class);
-                        if(login.getPassword().equals(pwd))
+                        User login = dataSnapshot.child(user).getValue(User.class);                              //Checking user Id is exist or not
+                        if(login.getPassword().equals(pwd))                                                      //checking user id and password is matching or not
                         {
-                            Intent homeActivity = new Intent(MainActivity.this,Home.class);
+                            Intent homeActivity = new Intent(MainActivity.this,Home.class);     //if user id and password is matching and click button
+                                                                                                                //page move from MainActivity to Home
                             Common.currentUser = login;
                             startActivity(homeActivity);
                             finish();
                         }
-                        else
+                        else                                                                                  //When the password is not matching with id
                             Toast.makeText(MainActivity.this, "Wrong password!", Toast.LENGTH_SHORT).show();
                     }
 
-                    else
+                    else                                                                                    //When ID section is empty
                     {
                         Toast.makeText(MainActivity.this, "Please enter your user name!", Toast.LENGTH_SHORT).show();
                     }
                 }
-                else
+                else                                                                                         //When the Id is not exist
                     Toast.makeText(MainActivity.this, "User is not exists!", Toast.LENGTH_SHORT).show();
             }
 
@@ -98,8 +99,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void  showSignUpDialog(){
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
-        alertDialog.setTitle("Sign up");
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);   //make AlertDialog for sign up
+        alertDialog.setTitle("Sign up");                                                    //display the word in sign up AlertDialog
         alertDialog.setMessage("Please fill full information");
 
         LayoutInflater inflater= this.getLayoutInflater();
@@ -109,17 +110,17 @@ public class MainActivity extends AppCompatActivity {
         edtNewPassword = (MaterialEditText)sign_up_layout.findViewById(R.id.edtNewPassword);
 
         alertDialog.setView(sign_up_layout);
-        alertDialog.setIcon(R.drawable.ic_account_circle_black_24dp);
+        alertDialog.setIcon(R.drawable.ic_account_circle_black_24dp);                    //icon for sign up AlertDialog
 
         alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-            @Override
+            @Override                                                                    //No button in AlertDialog
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
             }
         });
 
         alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-            @Override
+            @Override                                                                    //Yes button in AlertDialog to create new Id and password
             public void onClick(DialogInterface dialogInterface, int i) {
                 final User user= new User(edtNewUser.getText().toString(),
                         edtNewPassword.getText().toString());
@@ -127,12 +128,12 @@ public class MainActivity extends AppCompatActivity {
                 users.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.child(user.getUserName()).exists())
+                        if(dataSnapshot.child(user.getUserName()).exists())          //when user same user id is already exits
                             Toast.makeText(MainActivity.this, "User already exits!", Toast.LENGTH_SHORT).show();
 
                         else
                         {
-                            users.child(user.getUserName()).setValue(user);
+                            users.child(user.getUserName()).setValue(user);             //user id is created successfully
                             Toast.makeText(MainActivity.this, "User registration success!", Toast.LENGTH_SHORT).show();
                         }
                     }

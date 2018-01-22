@@ -31,8 +31,8 @@ public class CategoryFragment extends Fragment {
     RecyclerView.LayoutManager layoutManager;
     FirebaseRecyclerAdapter<Category,CategoryViewHolder> adapter;
 
-    FirebaseDatabase database;
-    DatabaseReference categories;
+    FirebaseDatabase database;          //connecting Firebase Database
+    DatabaseReference categories;       //connecting Firebase Database
 
     public static CategoryFragment newInstance(){
         CategoryFragment categoryFragment = new CategoryFragment();
@@ -45,7 +45,7 @@ public class CategoryFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         database = FirebaseDatabase.getInstance();
-        categories = database.getReference("Category");
+        categories = database.getReference("Category");     //The Name on category in Firebase Database where this java class call
     }
 
     @Nullable
@@ -81,6 +81,7 @@ public class CategoryFragment extends Fragment {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Toast.makeText(getActivity(), String.format("%s | %s",adapter.getRef(position).getKey(),model.getName()), Toast.LENGTH_SHORT).show();
+                        //If I use the code above, when I click one of category, you can see the category number and name
                         Intent startGame = new Intent(getActivity(),Start.class);
                         Common.categoryId = adapter.getRef(position).getKey();
                         Common.categoryName = model.getName();

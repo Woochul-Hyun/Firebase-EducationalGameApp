@@ -16,8 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ScoreDetail extends AppCompatActivity {
 
-    FirebaseDatabase database;
-    DatabaseReference question_score;
+    FirebaseDatabase database;                                          //connecting Firebase Database
+    DatabaseReference question_score;                                   //connecting Firebase Database
 
     RecyclerView scoreList;
     RecyclerView.LayoutManager layoutManager;
@@ -36,14 +36,14 @@ public class ScoreDetail extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ScoreDetail.this, Share.class);
+                Intent intent = new Intent(ScoreDetail.this, Share.class);      //When user click button, page move from ScoreDetail to Share
                 startActivity(intent);
                 finish();
             }
         });
 
         database = FirebaseDatabase.getInstance();
-        question_score = database.getReference("Question_Score");
+        question_score = database.getReference("Question_Score");                        //The Name on category in Firebase Database where this java class call
 
         scoreList = (RecyclerView)findViewById(R.id.scoreList);
         scoreList.setHasFixedSize(true);

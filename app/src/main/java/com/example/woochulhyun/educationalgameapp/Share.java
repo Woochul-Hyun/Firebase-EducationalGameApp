@@ -23,33 +23,33 @@ public class Share extends AppCompatActivity {
         // listeners of our two buttons
         View.OnClickListener handler = new View.OnClickListener() {
             public void onClick(View v) {
-                switch (v.getId()) {
+                switch (v.getId()) {                                         //Switch the page by the user clicking
 
-                    case R.id.buttonShareTextUrl:
+                    case R.id.buttonShareTextUrl:                           //If user click share text button, share section will be open for the text
                         shareTextUrl();
                         break;
 
-                    case R.id.buttonShareImage:
+                    case R.id.buttonShareImage:                              //If user click share text button, share section will be open for the text
                         shareImage();
                         break;
                 }
             }
         };
 
-        // our buttons
+                                                                            // our buttons
         findViewById(R.id.buttonShareTextUrl).setOnClickListener(handler);
         findViewById(R.id.buttonShareImage).setOnClickListener(handler);
 
     }
 
-    // Method to share either text or URL.
+                                                                             // Method to share either text or URL.
     private void shareTextUrl() {
         Intent share = new Intent(android.content.Intent.ACTION_SEND);
         share.setType("text/plain");
         share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
 
-        // Add data to the intent, the receiving app will decide
-        // what to do with it.
+                                                                            // Add data to the intent, the receiving app will decide
+                                                                            // what to do with it.
         share.putExtra(Intent.EXTRA_SUBJECT, "Title Of The Post");
         share.putExtra(Intent.EXTRA_TEXT, "http://www.codeofaninja.com");
 
@@ -57,16 +57,16 @@ public class Share extends AppCompatActivity {
     }
 
 
-    // Method to share any image.
+                                                                            // Method to share any image.
     private void shareImage() {
         Intent share = new Intent(Intent.ACTION_SEND);
 
-        // If you want to share a png image only, you can do:
-        // setType("image/png"); OR for jpeg: setType("image/jpeg");
+                                                                            // If you want to share a png image only, you can do:
+                                                                            // setType("image/png"); OR for jpeg: setType("image/jpeg");
         share.setType("image/*");
 
-        // Make sure you put example png image named myImage.png in your
-        // directory
+                                                                            // Make sure you put example png image named myImage.png in your
+                                                                            // directory
         String imagePath = Environment.getExternalStorageDirectory()
                 + "/myImage.png";
 

@@ -24,8 +24,8 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
     Vibrator vibrator;
 
 
-    final static long INTERVAL = 1000; //Timer interval is 1 sec
-    final static long TIMEOUT = 10000; //Total timer time is 10 sec
+    final static long INTERVAL = 1000;                                      //Timer interval is 1 sec
+    final static long TIMEOUT = 10000;                                      //Total timer time is 10 sec
     int progressValue= 0;
 
     CountDownTimer mCountDown;
@@ -64,25 +64,25 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-
+                                                                                    //put the vibrate function when user chose wrong answer
         vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
 
 
         mCountDown.cancel();
-        if (index < totalQuestion) //still have questions in list
+        if (index < totalQuestion)                                                  //still have questions in list
         {
             Button clickedButton = (Button)view;
             if (clickedButton.getText().equals(Common.questionList.get(index).getCorrectAnswer()))
             {
-                //Choose correct answer
+                                                                                    //when user chose correct answer
                 score+=10;
                 correctAnswer++;
-                showQuestion(++index); //next question
+                showQuestion(++index);                                                //next question
             }
             else
             {
-                //Choose wrong answer
-                vibrator.vibrate(1000); //vibrate 1 sec
+                                                                                     //when user chose wrong answer
+                vibrator.vibrate(1000);                                    //vibrate 1 sec when user chose wrong answer
                 Intent intent = new Intent(this,Done.class);
                 Bundle dataSend = new Bundle();
                 dataSend.putInt("SCORE", score);
@@ -107,7 +107,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
 
             if (Common.questionList.get(index).getIsImageQuestion().equals("true"))
             {
-                //if is image
+                                                                                    //if is image
                 Picasso.with(getBaseContext())
                         .load(Common.questionList.get(index).getQuestion())
                         .into(question_image);
@@ -118,7 +118,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
             {
                 question_text.setText(Common.questionList.get(index).getQuestion());
 
-                //if question is text, we will set image to invisible
+                                                                                        //if question is text, set image to invisible
                 question_image.setVisibility(View.INVISIBLE);
                 question_text.setVisibility(View.VISIBLE);
             }
@@ -131,7 +131,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener{
         }
         else
         {
-            //if it is final question
+                                                                                        //if it is final question
             Intent intent = new Intent(this,Done.class);
             Bundle dataSend = new Bundle();
             dataSend.putInt("SCORE", score);

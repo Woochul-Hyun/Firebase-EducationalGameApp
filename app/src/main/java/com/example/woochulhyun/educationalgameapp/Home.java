@@ -24,12 +24,12 @@ public class Home extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selectedFragment = null;
-                switch (item.getItemId())
+                switch (item.getItemId())               //Switch the page by the user clicking
                 {
-                    case R.id.action_category:
+                    case R.id.action_category:          //If user click category button on the bottom, page will be switched to CategoryFragment
                         selectedFragment = CategoryFragment.newInstance();
                         break;
-                    case R.id.action_ranking:
+                    case R.id.action_ranking:           //If user click category button on the bottom, page will be switched to RankingFragment
                         selectedFragment = RankingFragment.newInstance();
                         break;
                 }
